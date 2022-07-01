@@ -3,23 +3,37 @@
 // STEP3 - COPY below code to your functional component
 // STEP4 - IMPORT {GetAll,PostData,UpdateData,DeleteData} from apiRequest file
 
-GetAll("products" , params_IF_ANY).then((response) => {                // CALLING GET REQ DATA
+
+const params = {
+    limit:6,
+  }
+  GetAll("products",params).then((response) => {                // CALLING GET REQ DATA
+    console.log(response);
+  })
+
+
+const POSTDATA = {
+    ID:5,
+    name:"Name"
+  }
+PostData("products" , POSTDATA).then((response) => {                       // CALLING POST REQ DATA
     console.log(response);
 })
 
 
-PostData("products" , DATA).then((response) => {                       // CALLING POST REQ DATA
-    console.log(response);
-})
-
-
+const UPDATEDATA = {
+    ID:5,
+    name:"UpdatedName"
+  }
 UpdateData("products" , UPDATEDDATA).then((response) => {              // CALLING PUT REQ DATA
     console.log(response);
 })
 
 
+
+const DELETEDATA = {
+    ID:5,
+  }
 DeleteData("products" , DELETEDDATA).then((response) => {              // CALLING DEL REQ DATA
     console.log(response);
 })
-
-
