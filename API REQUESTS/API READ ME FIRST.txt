@@ -1,0 +1,25 @@
+// STEP1 - RUN  "npm install axios" in terminal
+// STEP2 - COPY apiRequest AND MAIN_URL file in src of your project
+// STEP3 - COPY below code to your functional component
+// STEP4 - IMPORT {GetAll,PostData,UpdateData,DeleteData} from apiRequest file
+
+GetAll("products" , params_IF_ANY).then((response) => {                // CALLING GET REQ DATA
+    console.log(response);
+})
+
+
+PostData("products" , DATA).then((response) => {                       // CALLING POST REQ DATA
+    console.log(response);
+})
+
+
+UpdateData("products" , UPDATEDDATA).then((response) => {              // CALLING PUT REQ DATA
+    console.log(response);
+})
+
+
+DeleteData("products" , DELETEDDATA).then((response) => {              // CALLING DEL REQ DATA
+    console.log(response);
+})
+
+
